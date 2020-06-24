@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Spinner } from "../../components/loading/style";
+
 export const Container = styled.aside`
   height: 100%;
 
@@ -55,6 +57,8 @@ export const Nav = styled.ul`
   }
 
   li {
+    display: flex;
+    align-items: center;
     a {
       color: inherit;
       text-decoration: none;
@@ -71,6 +75,11 @@ export const Nav = styled.ul`
       text-transform: uppercase;
       line-height: 22px;
       letter-spacing: 1.11px;
+    }
+
+    ${Spinner} {
+      height: 15px;
+      margin-left: 05px;
     }
   }
 `;
