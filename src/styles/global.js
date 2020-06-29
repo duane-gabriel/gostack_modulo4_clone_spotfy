@@ -22,5 +22,11 @@ const global = createGlobalStyle`
     color:#FFF;
   }
 
+  button{
+    &:hover{
+      cursor:pointer;
+    }
+  }
+
 `;
 export default global;

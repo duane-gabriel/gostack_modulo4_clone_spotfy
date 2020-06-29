@@ -6,12 +6,13 @@ import { call, put } from "redux-saga/effects";
 // call para fazer chamadas assíncronas
 
 import { Creators as Playlists } from "../ducks/playlists";
+import { Creators as Errors } from "../ducks/error";
 
 export function* getPlaylists() {
   try {
     const response = yield call(api.get, "/playlists");
     yield put(Playlists.getPlaylistsSuccess(response.data));
   } catch (err) {
-    console.log(err);
+    yield put(Errors.setError("Não foi possível obter as playlist"));
   }
 }

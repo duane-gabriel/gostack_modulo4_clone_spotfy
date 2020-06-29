@@ -4,6 +4,8 @@ import Global from "./styles/global";
 import Sidebar from "./components/sidebar";
 import Player from "./components/player";
 import Header from "./components/Header";
+import ErrorBox from "./components/ErrorBox";
+
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { Wrapper, Container, Content } from "./styles/components";
@@ -19,6 +21,7 @@ function App() {
           <Container>
             <Sidebar />
             <Content>
+              <ErrorBox />
               <Header />
               <Routes />
             </Content>

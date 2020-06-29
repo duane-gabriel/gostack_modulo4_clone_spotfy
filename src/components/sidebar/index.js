@@ -20,7 +20,7 @@ class Sidebar extends Component {
               <Link to="/">Navegar</Link>
             </li>
             <li>
-              <Link href="">Rádio</Link>
+              <a href="">Rádio</a>
             </li>
           </Nav>
 
